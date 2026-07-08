@@ -16,7 +16,8 @@ periodic network resets across six Gymnasium environments.
 ---
 
 ## Project Structure
-RL-PrimacyBias/
+
+*RL-PrimacyBias/
 ├── buffer.py    # Replay buffer (uniform sampling)
 ├── dqn.py       # Deep Q-Network agent + reset mechanism
 ├── sac.py       # Soft Actor-Critic agent + reset mechanism
@@ -24,7 +25,7 @@ RL-PrimacyBias/
 ├── train.py     # Training loops for all algorithms
 ├── utils.py     # Smoothing and plotting utilities
 └── main.py      # Main experiment runner
----
+---*
 
 ## Requirements
 
