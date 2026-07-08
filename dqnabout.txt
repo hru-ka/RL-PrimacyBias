@@ -1,0 +1,12 @@
+What each part does — simply
+QNetwork — the neural network. Takes a state, outputs one Q value per action. 3 layers, 256 neurons each.
+select_action() — epsilon-greedy. Most of the time picks the best action, sometimes picks randomly to explore.
+train() — this is the TD learning we discussed:
+
+Gets a batch from buffer
+Computes current Q values
+Computes TD target (reward + future value)
+Updates network to reduce the difference
+
+update_target() — copies weights from online network to target network. Keeps training stable.
+reset() — ⭐ this is the paper's contribution. Wipes the network weights completely. Notice the buffer is NOT touched here — it lives outside the agent.

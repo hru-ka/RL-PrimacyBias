@@ -1,0 +1,3 @@
+What it does — simply
+smooth() — averages rewards over a window so the plot isn't too noisy. Same as the paper's plots.
+plot_results() — takes all results and plots them on one graph. With vs without resets on the same chart so you can compare directly.

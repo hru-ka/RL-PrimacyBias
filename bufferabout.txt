@@ -1,0 +1,7 @@
+What each part does — simply
+__init__ — sets up empty storage. Like creating an empty notebook with fixed pages.
+self.ptr — a pointer that says "write the next transition here". When it reaches the end it wraps back to 0 — so old transitions get overwritten. This is the "circular buffer" idea.
+self.size — tracks how many transitions are actually stored so far.
+add() — stores one transition (s, a, r, s', done) at the current pointer position.
+sample() — picks batch_size random transitions for training. This is uniform sampling — every transition has equal chance of being picked (same as SAC in the paper).
+__len__ — lets you check how full the buffer is with len(buffer).

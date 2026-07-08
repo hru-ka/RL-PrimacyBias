@@ -1,0 +1,9 @@
+What it does — simply
+Runs everything in order:
+
+CartPole with DQN → plots
+MountainCar with DQN → plots
+MountainCarContinuous with SAC → plots
+Reacher with SAC → plots
+
+Each environment runs twice — once without resets, once with resets — then plots both on the same graph so you can compare.

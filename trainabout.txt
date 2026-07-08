@@ -1,0 +1,21 @@
+trainabout.txt
+What each part does — simply
+train_dqn() and train_sac() are the same structure:
+
+Create environment and agent
+Loop until max_steps:
+
+Take action → get reward → store in buffer
+Train agent from buffer
+If resets enabled and interval reached → reset agent
+
+
+Return steps and rewards for plotting
+
+use_resets — the key flag. True = paper's method, False = baseline.
+reset_interval — how often to reset:
+
+DQN: every 50k steps
+SAC: every 200k steps (same as paper)
+
+Random actions for first 10k steps (SAC only) — fills the buffer with diverse data before training starts.

@@ -1,0 +1,11 @@
+sacabout.txt
+What each part does — simply
+Actor — decides what action to take. Outputs a mean and std to sample actions from. This gives exploration naturally without epsilon-greedy.
+Critic — evaluates how good an action is. Has two Q networks (double Q-learning) to avoid overestimation — same as the paper.
+train() — three updates every step:
+
+Critic → learns better Q values using TD error
+Actor → learns to take actions that maximize Q
+Alpha → automatically tunes how much to explore
+
+reset() — ⭐ wipes all three networks (actor, critic, target). Buffer is untouched — it lives outside.
